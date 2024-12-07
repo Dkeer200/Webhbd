@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMS Animation</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #1e1e1e;
+      font-family: Arial, sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      gap: 10px;
+    }
+
+    .letter, .word {
+      font-size: 4em;
+      font-weight: bold;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: slideIn 1s ease-out forwards;
+    }
+
+    .letter:nth-child(1) { animation-delay: 0.5s; }
+    .letter:nth-child(2) { animation-delay: 1.5s; }
+    .letter:nth-child(3) { animation-delay: 2.5s; }
+    
+    .word-container {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .word:nth-child(1) { animation-delay: 3.5s; }
+    .word:nth-child(2) { animation-delay: 4.5s; }
+    .word:nth-child(3) { animation-delay: 5.5s; }
+    .words:nth-child(1) {animation-delay: 6.5s; }
+    
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- IMS Animation -->
+  <div class="container">
+    <div class="letter">I</div>
+    <div class="letter">M</div>
+    <div class="letter">S</div>
+  </div>
+
+  <!-- NIT and CALICUT Animation -->
+  <div class="word-container">
+    <div class="word">NIT</div>
+  </div>
+  <div class="words">
+    <div class="word">CALICUT</div>
+  </div>
+
+  <script>
+    // Animation complete hone ke baad link open karna
+    setTimeout(() => {
+      window.location.href = "https://ims.nitc.ac.in/Default/PageManager.html";
+    }, 7000); // 7 seconds ke baad link open hoga
+  </script>
+</body>
+</html>
